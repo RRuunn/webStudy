@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网格布局</title>
+	<style type="text/css">
+		/*基本网格布局，平均分布*/
+		.grid{
+			display: flex;
+		}
+		.g{
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+			flex: 1;
+		}
+		.per{
+			display: flex;
+		}
+		.p{
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+			flex: 1;
+		}
+		.p .u-1{
+			flex:0 0 50%; 
+		}
+		.p .u-2{
+			flex: 0 0 25%;
+		}
+	</style>
+</head>
+<body>
+	<!-- 基本网格布局，平均分布 -->
+	<div class="grid">
+		<div class="g">h</div>
+		<div class="g">hh</div>
+		<div class="g">hhh</div>
+		<div class="g"></div>
+	</div>
+	<!-- 	百分比布局 -->
+	<div class="per">
+		<div class="p u-1">hhh</div>
+		<div class="p">h</div>
+		<div class="p u-2">hh</div>
+	</div>
+
+</body>
+</html>

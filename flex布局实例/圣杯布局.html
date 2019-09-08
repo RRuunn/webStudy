@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>圣杯布局</title>
+	<style type="text/css">
+		.all{
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column; 
+		}
+		header,footer{
+			flex: 1;
+		}
+		.bady{
+			display: flex;
+			flex: 1
+		}
+		.bady .mian{
+			flex: 1;
+		}
+		.bady .bside{
+			flex: 0 0 12em;
+		}
+		.bady .nva{
+			flex: 0 0 12em;
+			order: -1;
+		}
+		@media (max-width: 768px){
+			.bady{
+				flex-direction: column;
+				flex: 1;
+			}
+			.nva,
+			.bside,
+			.mian{
+				flex: auto;
+			}
+		}
+	</style>
+</head>
+<body class="all">
+	<header>头部信息</header>
+	<div class="bady">
+		<main class="mian">中</main>
+		<nav class="nva">导航</nav>
+		<aside class="bside">右</aside>
+	</div>
+	<footer>底部信息</footer>
+</body>
+</html>

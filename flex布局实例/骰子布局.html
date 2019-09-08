@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>骰子布局</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		html,body{
+			height: 100%;
+		}
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			vertical-align: center;
+			flex-wrap: wrap;
+		}
+		[class$="box"]{
+			width: 104px;
+			height: 104px;
+			padding: 4px;
+			margin: 16px;
+			background-color: #e7e7e7; 
+			display: flex;
+			border-radius: 10%;
+			box-shadow: inset 0 5px white, 
+					    inset 0 -5px #bbb,
+					    inset 5px 0 #d7d7d7, 
+					    inset -5px 0 #d7d7d7;
+		}
+		.item{
+			display: block;
+			width: 24px;
+			height: 24px;
+			margin: 4px;
+			background-color: black;
+			border-radius: 50%;
+			box-shadow: inset 0 3px #111,inset 0 -3px #555;
+		}
+		.first-box{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.first-box .item{
+			align-self: center;
+		}
+		.second-box{
+			display: flex;
+			justify-content: space-between;
+		}
+		.second-box .item:nth-of-type(2){
+			align-self: flex-end;
+		}
+		.third-box{
+			display: flex;
+			justify-content: space-between;
+		}
+		.third-box .item:nth-of-type(2){
+			align-self: center;
+		}
+		.third-box .item:nth-of-type(3){
+			align-self: flex-end;
+		}
+		.forth-box{
+			display: flex;
+			justify-content: space-between;
+		}
+		.column{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.fifth-box .column:nth-of-type(2){
+			justify-content: center;
+		}
+		.sixth-box{
+			display: flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<div class="first-box">
+		<span class="item"></span>
+	</div>
+	<div class="second-box">
+		<span class="item"></span>
+		<span class="item"></span>
+	</div>
+	<div class="third-box">
+		<span class="item"></span>
+		<span class="item"></span>
+		<span class="item"></span>
+	</div>
+	<div class="forth-box">
+		<div class="column">
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+		<div class="column">
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+	</div>
+	<div class="fifth-box">
+		<div class="column">
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+		<div class="column">
+			<span class="item"></span>
+		</div>
+		<div class="column">
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+	</div>
+	<div class="sixth-box">
+		<div class="column">
+			<span class="item"></span>
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+		<div class="column">
+			<span class="item"></span>
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+	</div>
+</body>
+</html>
